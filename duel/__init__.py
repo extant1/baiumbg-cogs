@@ -1,4 +1,5 @@
+from redbot.core.bot import Red
 from .duel import Duel
 
-def setup(bot):
-    bot.add_cog(Duel())
+async def setup(bot: Red) -> None:
+    await bot.add_cog(Duel(bot))
